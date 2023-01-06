@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.21)
-project(yadro_test)
+project(sort)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(yadro_test
+add_executable(sort
         main.cpp
 
         gf.h
