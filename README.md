@@ -6,7 +6,7 @@
 mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
 make
-./ sort <input> <output> <memory size>
+./tape_sort <input> <output> <memory size>
 ```
 
 ## Описание
