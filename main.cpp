@@ -46,7 +46,7 @@ int main(int argc, const char *argv[]) {
     int64_t run_size = memory;
 
     // No. of Partitions of input file.
-    int64_t num_ways = file_size / run_size;
+    int64_t num_ways = file_size / run_size + (file_size % run_size != 0);
 
     clock_t start = clock();
 

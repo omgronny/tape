@@ -48,7 +48,7 @@ void split_and_sort(const std::string& input_file, const int64_t run_size,
 }
 
 int64_t final_count = 0;
-void merge_files(const std::string& output_file, int64_t n, int64_t k) {
+void merge_files(const std::string& output_file, int64_t k) {
 
     std::vector<FileTape> in;
     in.reserve(k);
@@ -103,7 +103,7 @@ void externalSort(const std::string& input_file, const std::string& output_file,
 
     split_and_sort(input_file, run_size, num_ways);
 
-    merge_files(output_file, run_size, num_ways);
+    merge_files(output_file, num_ways);
 }
 
 
