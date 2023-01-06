@@ -11,7 +11,6 @@ FileTape::FileTape(std::string file_) : filename(std::move(file_)), file(openFil
 std::optional<int32_t> FileTape::read_and_step() {
     int32_t val;
     if (fscanf(file, "%d ", &val) != 1) {
-        // std::cerr << "error in read_and_step" << std::endl;
         return std::nullopt;
     }
     return val;

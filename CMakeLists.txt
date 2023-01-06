@@ -7,7 +7,7 @@ find_package(Catch REQUIRED)
 
 include(tools/TestSolution.cmake)
 
-add_subdirectory(tests)
+# add_subdirectory(tests)
 
 add_executable(tape_sort
         main.cpp

@@ -32,7 +32,6 @@ std::tuple<std::string, std::string, int32_t> parse_arguments(int argc, const ch
 
     return { input, output, mem };
 
-    // return { "../input.txt", "../output.txt", 11 };
 }
 
 int main(int argc, const char *argv[]) {
@@ -47,7 +46,7 @@ int main(int argc, const char *argv[]) {
     int64_t run_size = memory;
 
     // No. of Partitions of input file.
-    int64_t num_ways = file_size / run_size + (file_size % run_size != 0);
+    int64_t num_ways = file_size / run_size;
 
     clock_t start = clock();
 

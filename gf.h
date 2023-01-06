@@ -94,7 +94,6 @@ void merge_files(const std::string& output_file, int64_t n, int64_t k) {
             count++;
         }
 
-
         hp.replaceMin(root);
     }
 
