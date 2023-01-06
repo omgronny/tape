@@ -21,18 +21,18 @@ int32_t test_sort(std::string& output) {
 
 std::tuple<std::string, std::string, int32_t> parse_arguments(int argc, const char *argv[]) {
 
-//    if (argc != 4) {
-//        std::cerr << "Usage: " << argv[0] << " <input file> <output file> <buffer size>" << std::endl;
-//        exit(EXIT_FAILURE);
-//    }
-//
-//    std::string input = argv[1];
-//    std::string output = argv[2];
-//    int32_t mem = std::stoi(argv[3]);
-//
-//    return { input, output, mem };
+    if (argc != 4) {
+        std::cerr << "Usage: " << argv[0] << " <input file> <output file> <buffer size>" << std::endl;
+        exit(EXIT_FAILURE);
+    }
 
-    return { "../input.txt", "../output.txt", 11 };
+    std::string input = argv[1];
+    std::string output = argv[2];
+    int32_t mem = std::stoi(argv[3]);
+
+    return { input, output, mem };
+
+    // return { "../input.txt", "../output.txt", 11 };
 }
 
 int main(int argc, const char *argv[]) {
@@ -58,13 +58,6 @@ int main(int argc, const char *argv[]) {
 
     std::cout << final_count << " numbers sorted in " << (double) (end - start) / CLOCKS_PER_SEC << " seconds\n";
 
-//    FileTape ft(input);
-//    for (int32_t i = 0; i < 10; ++i) {
-//        auto r = ft.read_next();
-//        std::cout << r << "\n";
-//    }
-
     return test_sort(output);
 
-    // return 0;
 }

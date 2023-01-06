@@ -1,0 +1,1 @@
+add_catch(test_sort simple_test.cpp)
